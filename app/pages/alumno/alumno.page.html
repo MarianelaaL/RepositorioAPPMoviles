@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-grid>
+      <ion-row class="ion-align-items-start">
+        <ion-col >
+          <ion-title id="nombre">Class-Dash</ion-title>
+        </ion-col>
+        <ion-col>
+          <ion-img src="./assets/Logo_sin_fondo.png" id="logo"></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid id="gridMain">
+    <ion-title id="title">Alumno</ion-title>
+    <ion-grid [fixed]="true" id="gridEmail">
+      <ion-row id="rowEmail" >
+          <ion-col size="auto">
+            <ion-textarea
+            fill="solid"
+            label="Email"
+            labelPlacement="floating"
+            helperText="Ingrese un Email Valido"
+            errorText="Email Incorrecto o no se encuentra"
+            ngModel
+            email>
+          </ion-textarea>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid [fixed]="true" id="gridPass">
+      <ion-row id="rowPass">
+          <ion-col size="auto">
+            <ion-textarea
+            fill="solid"
+            label="Contraseña"
+            labelPlacement="floating"
+            helperText="Ingrese Contraseña valida "
+            errorText="Contraseña Incorrecta"
+            ngModel
+            email>
+          </ion-textarea>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid id="gridbuttonInicio" [fixed]="true">
+      <ion-row id="rowbuttonInicio">
+        <ion-col>
+          <ion-button fill="clear" color="secondary" id="button" (click)="inicio()">Iniciar Sesion</ion-button>
+        </ion-col>
+      </ion-row>
+      </ion-grid>
+    <ion-grid [fixed]="true">
+      <ion-row>
+        <ion-button (click)="goBack()">
+            Volver
+        </ion-button>
+        <ion-button fill="clear" (click)="registrar()">Registrar</ion-button>
+      </ion-row>
+    </ion-grid> 
+  </ion-grid> 
+</ion-content>
+
+
